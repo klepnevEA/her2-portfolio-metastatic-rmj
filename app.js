@@ -10,9 +10,7 @@ var app = {};
 
 app.init = function(e)
 {
-    // e.add('012-visit-chem-kadc-1', 'onAfterLoad', function() {
-    //     clearTimeout(timer);
-    // }); 
+    var that = this; 
     e.add('32-slide', 'onAfterLoad', function() {
         // Инициализируем калькулятор для одной пациентки
         $('.dose-selector').bind('click touchstart', calc_one);

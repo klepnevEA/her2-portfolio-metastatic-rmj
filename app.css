@@ -485,14 +485,14 @@ normalize
     position: absolute;
     border: 1px solid red;
     z-index: 6000;
-    opacity: 0.5;
+    opacity: 0;
 }
 
 .close {
     position: absolute;
     border: 1px solid red;
     z-index: 9000;
-    opacity: 0.5;
+    opacity: 0;
 }
 
 .btn_popup_close {
@@ -693,6 +693,10 @@ body {
 }
 
 /*slides bg*/
+
+.bg_slide_00 {
+    background-image: url(img/HER2_iPad_Title.png)    
+}
 
 .bg_slide_01 {
     background-image: url(img/1/1_1.png)
@@ -933,6 +937,29 @@ body {
 }
 
 /*slides*/
+
+/*slide_00*/
+
+.btn_slide_00__1 {
+    top: 618px;
+    left: 42px;
+    width: 214px;
+    height: 62px;
+}
+
+.btn_slide_00__2 {
+    top: 618px;
+    left: 266px;
+    width: 214px;
+    height: 62px;
+}
+
+.btn_slide_00__3 {
+    top: 618px;
+    left: 662px;
+    width: 214px;
+    height: 62px;
+}
 
 /*slide_01*/
 
