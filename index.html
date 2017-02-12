@@ -1,0 +1,118 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+				 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<script language="JavaScript" src="core/js/jquery-2.1.1.min.js?8b0bc30d9bdfc389526361019dec7736" type="text/javascript"></script>
+<script language="JavaScript" src="core/js/xclm.fileSend.js?8b0bc30d9bdfc389526361019dec7737" type="text/javascript"></script>
+<script language="JavaScript" src="core/js/touchy.js?20bbc34fd9b881837a157e65da49c13b" type="text/javascript"></script><script language="JavaScript" src="core/js/xclm.nav.js?6831308fc7d1d967c2d83fe372cf838e" type="text/javascript"></script><script language="JavaScript" src="core/js/xclm.menu.js?8d4f7e4c15f6d61285450cf2f16ccb5a" type="text/javascript"></script><script language="JavaScript" src="core/js/xclm.actions.js?f1981151cafef9c86975094ef0a8e113" type="text/javascript"></script><script language="JavaScript" src="core/js/xclm.swipe.js?9f323e8c858a32a1dc23fce0f844e4f6" type="text/javascript"></script><script language="JavaScript" src="core/js/xclm.events.js?b29c5dd5f77158dd6abb9b8222c5b8ba" type="text/javascript"></script><script language="JavaScript" src="core/js/xclm.app.js?2de02510bd2847fdc955501b04974597" type="text/javascript"></script><script language="JavaScript" src="core/js/xclm.data.js?a4e4fdece3c3ef0af34ad38c4b147dc6" type="text/javascript"></script><script language="JavaScript" src="core/js/xclm.profiling.js?e3a38d6fec26afd110c96f6b722a7955" type="text/javascript"></script><script language="JavaScript" src="core/js/xclm.popup.js?076a45d49e9cec4bd4a28c77fc43d848" type="text/javascript"></script><script language="JavaScript" src="core/js/xclm.stat.js?90043476240d5b49d649fd409509c1bd" type="text/javascript"></script><script language="JavaScript" src="core/js/xclm.js?5beb2b2c59b7e3f90f2ec7cb529da96e" type="text/javascript"></script><script language="JavaScript" src="core/js/iosbridge.js?457b425608738630835454029b976e6e" type="text/javascript"></script><script language="JavaScript" src="app.js?09684053f88595f0c107f587bc4c1fd4" type="text/javascript"></script><link href="core/css/xclm.css?b66ed39f825011693d1d6c58085178f8" rel="stylesheet" /><link href="app.css?96d87e6a935de39219d889cecf0e1610" rel="stylesheet" />  </head>
+  <body id="touch-me">
+
+<div class="xclmSlideBuilder">
+</div>
+
+<div class="xclmStartForm">
+	<img class="bg" src='core/img/interface.png' />  
+    
+	<!--buttons--> 
+	<img class="btn xclmExitBtn" src="core/img/btn.png" />         
+	<img class="btn xclmVisitBtn" src='core/img/btn.png'  />
+ 	<img class="btn xclmViewBtn" src='core/img/btn.png' /> 
+  	<img class="xclmHelpBtn xclmHidden" src='core/img/xclmHelpBtn.png' />                 
+ 	<img class="xclmTestBtn xclmHidden" src='core/img/xclmTestBtn.png' /> 
+  	<!--<img class="xclmSentBtn" src='core/img/formSent.png'/>--> 
+    
+ 	<!--imgLogo--> 
+	<img id="xclm_logo" class="xclmImgLogo" />       
+    
+    <div  class="xclmUserName">
+    <p id="xclm_username"></p> 
+    </div>
+    
+    <div  class="xclmTheme">
+    <p id="xclm_title"></p> 
+    </div>        
+</div>  
+
+<div class="xclmPresentation xclmHidden">
+	<div id="menudiv" class="xclmMenuDiv">
+		<ul id="menu" class="xclmMenu">
+		</ul>
+		<div id="xclmBreadCrumbs"></div>
+	</div> 
+    
+  <div id="canvas" class="xclmCanvas">
+  </div>
+  <div id="sysmenu" class="xclmHidden xclmSysmenu">
+  	<button class="xclmVisitExitButton" id="endVisit" href="#">Завершить визит</button>
+    <div id="closeEndVisit" class="xclmVisitExitButtonClose">
+    	<div></div>
+        <div></div>
+    </div>
+  </div>
+
+</div>
+
+
+<div class="xclmFileSend xclmHidden">
+<img class="fon" src='core/img/formSentBackground.png'  />
+
+	<!--пользователь-->
+    <div  class="xclmUserName">
+    <p id="xclm_username"></p> 
+    </div>
+	
+	
+	<!--левое поле-->
+	<div class="formSentLeftDiv">
+		<h1>Форма отправки документов</h1>
+		
+		<!--список файлов-->
+		<ol>
+			<li>
+				<hr />
+				<div class="checkbox">
+					<input class="xclmAttachFile" data-url="/app/xdata/dst/aktemra-adults/pdf/ADACTA.pdf" data-title="ADACTA.pdf" type="checkbox" id="check1">
+					<label class="inputText" for="check1">ADACTA.pdf<br /><br /></label>
+				</div>
+				<div>
+					<a data-file="pdf/ADACTA.pdf" href="#" type="submit" class="xclmOpenFile formSentOpenFile">Просмотр</a>
+				</div>
+			</li>
+			
+			<li>
+				<hr />
+				<div class="checkbox">
+					<input class="xclmAttachFile" data-url="/app/xdata/dst/aktemra-adults/pdf/EULAR_recomend.pdf" data-title="EULAR_recomend.pdf" type="checkbox" id="check2">
+					<label class="inputText" for="check2">EULAR-recomend.pdf<br /><br /></label>
+				</div>
+				<div>
+					<a data-file="pdf/EULAR-recomend.pdf" href="#" type="submit" class="xclmOpenFile formSentOpenFile">Просмотр</a>
+				</div>
+			</li>
+
+			
+		</ol>
+	</div>
+
+	<!--правое поле-->
+	<div class="formSentRightDiv">
+		<h1>Отправить файлы</h1>
+		<hr />
+		<ul>
+			<li>Выберите файл слева</li>
+			<li>Введите e-mail получателя</li>
+			<li>Нажмите "Отправить"</li>
+		</ul>
+		
+		<!--куда посылать-->
+		<input id="emailInput" class="formSentMail" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" value="E-mail получателя"> 
+		<a href="#" class="formSentMailButton" type="submit">Отправить <span id="xclmFileNumber">0</span> файл(ов)</a>     	
+	</div>
+
+	<!--кнопка назад-->
+	<a href="#" class="formSentBack" type="submit">Назад</a>
+
+</div>
+  <script>
+  	xclm.init();
+  </script>
+  </body>
+</html>

@@ -1,0 +1,196 @@
+/*---reset---*/
+html, body, div, span, applet, object, iframe, 
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video { 
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+	/*font-family: TextPro;*/
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body {
+	margin:0;
+	padding:0;
+	width:1024px;
+	height:768px;
+	font-family:Verdana, Geneva, sans-serif;	 		
+	}
+
+/*---reset end---*/
+
+
+#canvas
+{
+	overflow: hidden;
+	width: 1024px;
+	height: 768px;
+}
+
+/* Общий класс для спрятанного pop-up */
+.xclmHidden
+{
+	/*visibility: hidden;*/
+	display: none;
+}
+
+.xclmMenuHidden
+{
+	visibility: hidden;
+}
+
+#menu ul li div.xclmMenuHidden 	{
+	display: none;
+	}
+
+
+	
+// Visit starting form
+	
+.fon {
+	position:absolute;
+	top:0px; 
+	left:0px;
+	z-index:4000;
+	width:1024px;
+	}
+	
+.btn {
+//	border:1px solid red;
+	z-index:2000;
+//	opacity:0;
+	position:absolute;
+	cursor:pointer;
+	}
+	
+/*buttons*/	
+
+.xclmExitBtn {
+	width: 350px;
+	height: 50px;
+	top: 645px;
+	left: 70px;
+	}
+	
+.xclmVisitBtn	{
+	width:280px;
+	height:60px;
+	top:310px;
+	left:80px;
+	}
+	
+.xclmViewBtn {
+	width:280px;
+	height:60px;
+	top:400px;
+	left:80px;
+	}	
+	
+.xclmTestBtn {
+	position:absolute;
+	width:175px;
+	top:654px;
+	left:766px;
+	cursor: pointer;
+	}
+	
+.xclmHelpBtn {
+	position:absolute;
+	width:175px;
+	top:654px;
+	left:553px;
+	cursor: pointer;
+	}
+
+.xclmSentBtn {
+	position: absolute;
+	width: 275px;
+	top: 495px;
+	left: 84px;
+	cursor: pointer;
+	z-index: 5000;
+	}
+
+	
+/*buttons end*/	
+
+/*userName*/
+.xclmUserName {
+	position:absolute;
+	top:60px;
+	right:65px;	
+	width:400px;
+	text-align:right;
+	}
+
+.xclmUserName p{
+	color:#FFF;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size:21px;
+	}
+	
+/*theme*/
+.xclmTheme {
+	position:absolute;
+	top:175px;
+	left:383px;	
+	width:550px;
+	}
+
+.xclmTheme p{
+	color:#3F3E3E;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size:26px;
+	line-height:1.2em;
+	}
+	
+/*imgLogo*/	
+
+.xclmImgLogo {
+	position:absolute;	
+  top: 195px;
+  left: 89px;
+  width: 267px;
+	}
+
+.xclmDisplayNone
+{
+ display:none;
+}
+
+

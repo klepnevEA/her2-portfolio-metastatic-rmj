@@ -1,0 +1,98 @@
+<article>
+	<div class="bg bg_katsila"></div>
+	<div class="bg bg_slide_10"></div>
+
+
+	  <button class="btn xclmAct xclmPopupOpen katsila_slide_02_popup" data-popup="popup1"></button>
+
+		<button class="btn xclmAct xclmPopupOpen katsila_slide_02_popup_2" data-popup="popup2"></button> 
+    
+  <div id="popup1" class="xclmHidden">
+
+		<div class="bg bg_katsila"></div>
+		<div class="bg bg_slide_10__2"></div>
+
+		<button class="close xclmAct xclmPopupClose btn_popup_close" data-popup="popup1"></button>  
+
+
+
+		<img class="img-slide-4" src='img/Kadcyla_4/Kadcyla_4_6_6.png'  />
+		<div class="left-blur"></div>
+		<div class="right-blur"></div>
+
+		<img class="img-slide-4-1" src='img/Kadcyla_4/Kadcyla_4_6_1.png'  />
+		<img class="img-slide-4-2" src='img/Kadcyla_4/Kadcyla_4_6_2.png'  />
+		<img class="img-slide-4-3" src='img/Kadcyla_4/Kadcyla_4_6_3.png'  />
+		<img class="img-slide-4-4" src='img/Kadcyla_4/Kadcyla_4_6_4.png'  />
+		<img class="img-slide-4-5" src='img/Kadcyla_4/Kadcyla_4_6_5.png'  />
+
+
+		<input class="left-range unBlockTouchMove input_41" type="range" min="0" max="100" value="100" step="1" id="left-range" 
+	     oninput="RangePic()" />
+		 
+		<input class="right-range unBlockTouchMove input_41" type="range" min="0" max="100" value="0" step="1" id="right-range" 
+	     oninput="RangePic()" />
+	</div>	
+
+  <div id="popup2" class="xclmHidden">
+
+		<div class="bg bg_slide_10__3" ></div>
+
+			<button class="close xclmAct xclmPopupClose btn_popup_close" data-popup="popup2"></button> 
+	</div>
+
+
+	<div class="xclmAct xclmBreadCrumbs xclmHidden"  data-menu-highlight="visit">
+		<ul>
+			<li><!-- &#9658; --> </li>
+		</ul>
+	</div>
+
+<script>
+function RangePic() {	
+		var leftValue = document.getElementById("left-range").value;
+		$('.left-blur').css('width',leftValue * 1.45);
+		
+		if (leftValue < 10) 
+			{
+				$(".img-slide-4-1").addClass("active"); 
+			}
+			else {
+				$(".img-slide-4-1").removeClass("active"); 
+			};
+		
+		var rightValue = document.getElementById("right-range").value;		
+		$('.right-blur').css('width',500 - rightValue * 5);
+		$('.right-blur').css('left',370 + rightValue * 4.94);
+				 
+		if (rightValue >25) 
+			{
+				$(".img-slide-4-3").addClass("active"); 
+			}
+			else {
+				$(".img-slide-4-3").removeClass("active"); 
+			};	
+		if (rightValue >55) 
+			{
+				$(".img-slide-4-4").addClass("active"); 
+			}
+			else {
+				$(".img-slide-4-4").removeClass("active"); 
+			};	
+			
+		if (rightValue >90) 
+			{
+				$(".img-slide-4-5").addClass("active"); 
+			}
+			else {
+				$(".img-slide-4-5").removeClass("active"); 
+			};				
+			
+	};
+
+
+
+</script>
+
+
+</article> 
