@@ -146,7 +146,7 @@ var xclmMenu = function()
 						if (l2['ulclass'] != undefined)
 							div2.className = l2['ulclass'];
 						
-						/*div2.className+= ' xclmMenuHidden  xclmMenuLevel2';*/
+						div2.className+= ' xclmMenuHidden  xclmMenuLevel2';
 						for (subsubindex in l2['items'])
 						{
 							var l3 = that.menu[index]['items'][subindex]['items'][subsubindex];

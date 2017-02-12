@@ -44,7 +44,87 @@ app.init = function(e)
         
     });
 
+    e.add('37-slide', 'onAfterLoad', function() {
+    
+        var text = '';
+        var textSubmit = 'С уважением, <br/>компания "Рош"';
+        // мой код
+        $('#emailInput').on('focus', function() {
+            console.log('Scroll focus '+$('#emailInput').val());            
+            if ($('#emailInput').val() == 'E-mail получателя') 
+                $('#emailInput').val('');
+            
+            $('body').css({position:'absolute'});
+            $(window).scrollTop(0);
+        })
+        $('#emailInput').on('blur', function(){
+            if ($('#emailInput').val() == '') 
+            {
+                $('#emailInput').val('E-mail получателя');
+                $('#emailInput').css('color','#ccc');
+            };
 
+            console.log('Scroll blur');
+            $('body').css({position:'fixed'});
+        })
+        $('#emailInput').on('keyup', function(){
+            $('#emailInput').css('color','#000');
+        })
+
+        
+    
+        $('.xclmSentBtn').bind('click touchstart', that.open);
+        $('.formSentBack').bind('click touchstart', that.close);
+
+        $('.xclmOpenFile').each(function() {
+            $(this).bind('touchstart click', function(event) {
+                console.log('Try to open');
+                var x = event.screenX, y = event.screenY;
+                var element = $(event.currentTarget);
+                xclm.app.open(element.attr('data-file'), x, y);
+            });
+        });
+        
+        // мой код
+        $('.formSentMailButton').bind('touchstart click', function() {
+            var mstring = 'mailto:' + $(".formSentMail").val() + '?subject=Материалы%20от%20компании%20Рош&body='+text+ '<br/><br/>' + textSubmit;
+            $('.formSentMailButton').attr('href', mstring);
+        });
+        // мой код
+        
+        $('.xclmAttachFile').bind('touchend click', function(event) {
+            if($(this).attr('data-url') == 'russco') {
+               text = ''; 
+            } else {
+                text = 'Уважаемый коллега, <br/> в продолжение нашего разговора направляю Вам следующие файлы:';
+            }   
+            textSubmit = ' С уважением, <br/>Компания ЗАО «РОШ-Москва»';
+            var total = 0;
+            $('.xclmAttachFile').each(function() {
+                if ($(this).prop('checked')) 
+                {
+                    total++;
+                    
+                    if($(this).attr('data-url') == 'links') {
+                        console.log($(this).attr('data-url'));
+                        text = text+ '<br/>' +'%20<a href="http://roche.medtv.xclm.ru/metastatic/">http://roche.medtv.xclm.ru/metastatic/</a><br/>%20<a href="http://roche.medtv.xclm.ru/neo/">http://roche.medtv.xclm.ru/neo/</a>' ;
+                    } else if($(this).attr('data-url') == 'russco') {
+                        text = text+ '<br/> Уважаемый коллега, <br/> компания Рош приглашает Вас принять участие в сателлитных симпозиумах в рамках Большой конференции RUSSCO «Рак Молочной Железы»: <br/><br/> 1. 02 февраля 2017 г в 12:00 «Ранний рак молочной железы у пациенток фертильного возраста:<br/>в поиске оптимального решения», зал «Бальный»<br/>2. 03 февраля 2017 г.  в 12:00 «Метастазы HER2+ РМЖ в головной мозг: как улучшить прогноз?<br/>Мультидисциплинарный подход: возможности химиотерапевта, радиолога, нейрохирурга»<br/>Адрес: Москва, ул. Тверская, дом 3, отель  «The Ritz-Carlton, Moscow»<br/>' ;                        
+                    }
+                     else {
+                        text = text+ '<br/>' +'%20<a href="http://roche.xpractice.ru'+$(this).attr('data-url')+'">'+$(this).attr('data-title')+'</a>' ;
+                    }
+                }
+                console.log(text);
+            });
+            
+            
+            $('#xclmFileNumber').html(total);
+
+        });
+        
+        
+    });
 
  function calc_few()
 {
@@ -143,6 +223,6 @@ function calc_one()
     $('#dose-total').text(dose_total_digits);
 }
 
-    
+
                        
 };   

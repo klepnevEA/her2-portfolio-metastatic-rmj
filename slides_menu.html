@@ -18,27 +18,124 @@ xclm.menuconfig = [
 		
             
 	},
-	{
+{
+		/*name: '01-cover',*/
 		title:	'Кадсила<sup>&reg;</sup>',
-		act:  'go',
-		go:		"02-slide",
-		items:	false 
-		
-            
+ 		act:  'open',
+ 		go:	"visit", 
+    ulclass: 'menuCover1',
+		items:	[
+
+							{
+								title:	'Механизм действия Кадсилы',
+								act:  'go',
+								go:		"22-slide",
+								items:	false
+							},			
+              {
+                title:  'Преимущества Кадсилы по эффективности',
+								act:  'open',
+                items:[
+											   {
+														title:  'Во второй линии по сравнению со стандартной таргетной терапией',
+														act:  'go',
+														go:  '23-slide',
+														items:  false,
+														slides:  ['23-slide']
+											   },
+											   {
+														title:  'По сравнению с терапией по выбору врача',
+														act:  'go',
+														go:  '26-slide',
+														items:  false,
+														slides:  ['26-slide']
+											   },
+											   {
+														title:  'Для всех групп пациентов',
+														act:  'go',
+														go:  '28-slide',
+														items:  false,
+														slides:  ['28-slide']
+											   },
+											   {
+														title:  'Для пациентов с метастазами в головной мозг',
+														act:  'go',
+														go:  '29-slide',
+														items:  false,
+														slides:  ['29-slide']
+											   }
+					          	]		
+					                    
+					    },
+							{
+                title:  'Преимущество Кадсилы по безопасности',
+								act:  'open',
+                items:[
+											   {
+														title:  'По нежелательным явлениям',
+														act:  'go',
+														go:  '30-slide',
+														items:  false,
+														slides:  ['30-slide']
+											   },
+											   {
+														title:  'По частоте редукции дозы и отмены терап',
+														act:  'go',
+														go:  '31-slide',
+														items:  false,
+														slides:  ['31-slide']
+											   }
+					          	]		
+					                    
+					    },
+							{
+                title:  'Расчет дозы и упаковок',
+								act:  'open',
+                items:[
+											   {
+														title:  'Калькулятор доз и упаковок',
+														act:  'go',
+														go:  '32-slide',
+														items:  false,
+														slides:  ['32-slide']
+											   },
+											   {
+														title:  'Изменение дозировки',
+														act:  'go',
+														go:  '33-slide',
+														items:  false,
+														slides:  ['33-slide']
+											   }
+					          	]		
+					                    
+					    },
+							{
+								title:	'Приготовление и хранение раствора',
+								act:  'go',
+								go:		"34-slide",
+								items:	false
+							},					    					    
+							{
+								title:	'Как вводить Кадсилу',
+								act:  'go',
+								go:		"35-slide",
+								items:	false
+							}	
+         ]
 	},		
 	{
 		title:	'<img src="img/icon_3.png"/>',
 		act:  'go',
-		go:		"02-slide",
+		go:		"36-slide",
 		items:	false,
-		slides:  ['02-slide']		
+		slides:  ['36-slide']		
 	},		
 	{
 		title:	'<img src="img/icon_6.png"/>',
 		act:  'go',
-		go:		"02-slide",
+		go:		"37-slide",
 		items:	false,
-		slides:  ['02-slide']		
+		slides:  ['37-slide']		
 	}
 	
   	];

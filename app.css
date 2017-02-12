@@ -553,7 +553,7 @@ body {
     position: absolute;
     padding: 18px;
     z-index: 1000;
-    width: 310px;
+    width: 528px;
     background: -webkit-linear-gradient(top, rgba(143,183,221,1) 0%,rgba(0,102,204,1) 30%,rgba(0,102,204,1) 70%,rgba(143,183,221,1) 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom, rgba(143,183,221,1) 0%,rgba(0,102,204,1) 30%,rgba(0,102,204,1) 70%,rgba(143,183,221,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     border-radius: 10px;
@@ -578,7 +578,7 @@ body {
     width: 0;
     height: 0;
     border-left: 16px solid transparent;
-    border-bottom: 15px solid #fccf91;
+    border-bottom: 15px solid rgba(143,183,221,1);
     border-right: 16px solid transparent
 }
 
@@ -591,9 +591,9 @@ body {
 .xclmMenu>li>div a {
     color: #000;
     text-decoration: none;
-    line-height: 1em;
-    font-size: 18px;
-    font-family: Verdana,Geneva,sans-serif
+    line-height: 1.2em;
+    font-size: 21px;
+    font-family: Verdana,Geneva,sans-serif;
 }
 
 
@@ -631,9 +631,9 @@ body {
 
 .xclmMenu>li>div>ul>li li {
     border-bottom: 1px solid #aaa;
-    width: 285px;
-    padding: 5px 0;
-    margin-left: 0
+    width: 468px;
+    padding: 6px 14px;
+    margin-left: 0;
 }
 
 .xclmMenu>li>div>ul>li li a {
@@ -686,6 +686,10 @@ body {
 
 .bg_beiodaim {
     background-image: url(img/bg_beyodaim.jpg)   
+}
+
+.bg_4 {
+    background-image: url(img/bg_4.jpg)      
 }
 
 /*slides bg*/
@@ -922,6 +926,10 @@ body {
 
 .bg_slide_35__3 {
     background-image: url(img/35/35_3.png)
+}
+
+.bg_slide_36 {
+    background-image: url(img/HER2_2016_Instr.png)
 }
 
 /*slides*/
@@ -1495,12 +1503,204 @@ input.right-range[type='range']::-webkit-slider-thumb {
     height: 53px;
 }
 
+/*slide-36*/
+
+.instructions_slide_1 {
+    background-image: url(img/HER2_2016_Instr.png)
+}
+
+.instructions_btn_1 {
+    top: 378px;
+    left: 30px;
+    width: 289px;
+    height: 123px
+}
+
+.instructions_btn_2 {
+    top: 378px;
+    left: 364px;
+    width: 289px;
+    height: 123px
+}
+
+.instructions_btn_3 {
+    top: 378px;
+    left: 700px;
+    width: 289px;
+    height: 123px
+}
+
+.instructions_popup_close {
+    position: absolute;
+    top: 91px;
+    left: 944px;
+    width: 28px;
+    z-index: 9990!important
+}
+
+.pdf-container-outer {
+    position: absolute;
+    top: 58px;
+    left: 0;
+    width: 1024px;
+    height: 800px;
+    overflow-y: scroll!important;
+    -webkit-overflow-scrolling: touch;
+    background-color: #eee;
+    z-index: 9900
+}
+
+iframe {
+    width: 605px
+}
 
 
+/*mail*/
 
+.formSentLeftDiv,.formSentRightDiv {
+    position: absolute;
+    padding: 19px
+}
 
+.formSentLeftDiv {
+    left: 10px;
+    width: 593px;
+    min-height: 600px;
+    top: 181px
+}
 
+.formSentRightDiv {
+    top: 323px;
+    left: 702px;
+    width: 242px
+}
 
+.formSentRightDiv h1 {
+    color: #01B1B4;
+    font-size: 22px;
+    text-align: center;
+    font-weight: 700
+}
+
+.formSentRightDiv hr {
+    background-color: #01B1B4;
+    height: 1px;
+    border: 0
+}
+
+.formSentRightDiv ul {
+    list-style: decimal!important;
+    color: #01B1B4;
+    margin: 10px 0 10px 32px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.5em
+}
+
+.formSentRightDiv ul span {
+    color: #434242;
+    font-weight: 400
+}
+
+.checkbox {
+    position: relative;
+    padding-left: 45px;
+    width: 920px;
+    margin-bottom: 11px;
+}
+
+.checkbox input[type=checkbox] {
+    display: none
+}
+
+.checkbox label:after {
+    content: '';
+    display: block;
+    height: 31px;
+    width: 31px;
+    position: absolute;
+    top: -3px;
+    left: 6px;
+    background-image: url(core/img/inputOnCheked.png);
+    background-size: 31px;
+    background-repeat: no-repeat;
+}
+
+.checkbox input[type=checkbox]:checked+label:after {
+    height: 31px;
+    width: 31px;
+    background-image: url(core/img/inputCheked.png);
+    background-size: 31px;
+    background-repeat: no-repeat;
+}
+
+.checkbox .inputText {
+    color: #4F4F4F;
+    font-size: 19px;
+    line-height: 1.3em;
+    font-family: ImagoProBoo
+}
+
+.formSentOpenFile {
+    width: 228px;
+    height: 38px;
+    border: 1px solid #0B69CC;
+    margin: -42px 0 0 10px;
+    float: right;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 7px;
+    box-sizing: border-box;
+    text-decoration: none;
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(0,#8cb8e7),color-stop(100%,#facba1));
+    background: -webkit-linear-gradient(top,#8cb8e7 0,#facba1 100%);
+    display: none
+}
+
+.formSentMail {
+    width: 253px;
+    height: 43px;
+    border: 0px solid #C3DBF3;
+    margin: 20px 0 10px;
+    font-size: 12px;
+    text-align: center;
+    color: #E4E4E4;
+    background-color: #fff;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    border-radius: 0,
+    
+}
+
+.formSentMailButton {
+    display: block;
+    width: 254px;
+    height: 49px;
+    margin: 10px 0 0;
+    box-sizing: border-box;
+    opacity: 0
+}
+
+.btnSentBack {
+    position: absolute;
+    top: 80px;
+    left: 940px;
+    z-index: 7000;
+    width: 35px;
+    height: 35px;
+    background-image: url(img/close_blue.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: transparent;
+    border:0;
+}
+
+.bg_slide_37 {
+    background-image: url(img/mail.png)
+}
 
 
 /*calc*/
